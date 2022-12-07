@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/menus/game_ui.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/Poppins/Poppins-Medium.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 24
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=4]
+Label/colors/font_color = Color( 1, 1, 1, 1 )
+Label/colors/font_color_shadow = Color( 0, 0, 0, 0 )
+Label/colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+Label/constants/line_spacing = 3
+Label/constants/shadow_as_outline = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/fonts/font = SubResource( 3 )
+Label/styles/normal = null
+
+[node name="GameUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 4 )
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 196.0
+margin_bottom = 66.0
+color = Color( 0.0156863, 0.00784314, 0.188235, 0.588235 )
+
+[node name="ScoreLabel" type="Label" parent="ColorRect"]
+unique_name_in_owner = true
+margin_right = 196.0
+margin_bottom = 66.0
+text = "Score: 0 & 0"
+align = 1
+valign = 1
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -196.0
+margin_bottom = 66.0
+color = Color( 0.0156863, 0.00784314, 0.188235, 0.588235 )
+
+[node name="LevelLabel" type="Label" parent="ColorRect2"]
+unique_name_in_owner = true
+margin_right = 196.0
+margin_bottom = 66.0
+text = "Level: 1"
+align = 1
+valign = 1
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -246.0
+margin_top = 509.0
+margin_right = 48.0
+margin_bottom = 594.0
+rect_scale = Vector2( 0.680038, 0.680038 )
+color = Color( 0.0156863, 0.00784314, 0.188235, 0.588235 )
+
+[node name="DetailLabel" type="Label" parent="ColorRect3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 117.0
+margin_bottom = 29.0
+rect_scale = Vector2( 0.7, 0.7 )
+text = "Press \"R\" to Restart
+Press \"N\" to go to next level"
+align = 1
+valign = 1

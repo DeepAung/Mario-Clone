@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/themes/mainmenu_theme.tres" type="Theme" id=1]
+[ext_resource path="res://src/menus/levels_menu.gd" type="Script" id=2]
+
+[node name="LevelsMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0313726, 0.00392157, 0.192157, 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 74.0
+size_flags_vertical = 1
+text = "Levels"
+align = 1
+valign = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 78.0
+margin_right = 1024.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+custom_constants/margin_top = 50
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/MarginContainer"]
+margin_left = 512.0
+margin_top = 50.0
+margin_right = 512.0
+margin_bottom = 522.0
+size_flags_horizontal = 6
+custom_constants/vseparation = 20
+custom_constants/hseparation = 20
+columns = 5

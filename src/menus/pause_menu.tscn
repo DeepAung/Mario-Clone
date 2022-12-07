@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/themes/mainmenu_theme.tres" type="Theme" id=1]
+[ext_resource path="res://src/menus/pause_menu.gd" type="Script" id=2]
+
+[node name="PauseMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0317812, 0.00852966, 0.167969, 0.588235 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 30.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 1024.0
+margin_bottom = 74.0
+text = "Pause Menu"
+align = 1
+valign = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+margin_top = 78.0
+margin_right = 1024.0
+margin_bottom = 498.0
+custom_constants/margin_right = 250
+custom_constants/margin_top = 50
+custom_constants/margin_left = 250
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/MarginContainer"]
+margin_left = 250.0
+margin_top = 50.0
+margin_right = 774.0
+margin_bottom = 420.0
+custom_constants/separation = 30
+
+[node name="ResumeButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+margin_right = 524.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 0, 70 )
+text = "Resume"
+
+[node name="RestartButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 100.0
+margin_right = 524.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 0, 70 )
+text = "Restart"
+
+[node name="SettingButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 200.0
+margin_right = 524.0
+margin_bottom = 270.0
+rect_min_size = Vector2( 0, 70 )
+text = "Settings"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 300.0
+margin_right = 524.0
+margin_bottom = 370.0
+rect_min_size = Vector2( 0, 70 )
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/SettingButton" to="." method="_on_SettingButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]

@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/world.gd" type="Script" id=2]
+[ext_resource path="res://src/menus/game_ui.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/menus/pause_menu.tscn" type="PackedScene" id=4]
+
+[node name="World" type="Node"]
+script = ExtResource( 2 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ViewportContainer" type="ViewportContainer" parent="HBoxContainer"]
+margin_right = 512.0
+margin_bottom = 600.0
+
+[node name="Viewport" type="Viewport" parent="HBoxContainer/ViewportContainer"]
+size = Vector2( 512, 600 )
+handle_input_locally = false
+hdr = false
+usage = 0
+render_target_update_mode = 3
+
+[node name="Camera2D" type="Camera2D" parent="HBoxContainer/ViewportContainer/Viewport"]
+current = true
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
+margin_left = 516.0
+margin_right = 521.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 5, 0 )
+
+[node name="ViewportContainer2" type="ViewportContainer" parent="HBoxContainer"]
+margin_left = 525.0
+margin_right = 1037.0
+margin_bottom = 600.0
+
+[node name="Viewport" type="Viewport" parent="HBoxContainer/ViewportContainer2"]
+size = Vector2( 512, 600 )
+handle_input_locally = false
+hdr = false
+usage = 0
+render_target_update_mode = 3
+
+[node name="Camera2D" type="Camera2D" parent="HBoxContainer/ViewportContainer2/Viewport"]
+current = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="GameUI" parent="CanvasLayer" instance=ExtResource( 3 )]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource( 4 )]
