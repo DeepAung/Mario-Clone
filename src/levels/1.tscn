@@ -53,6 +53,9 @@ controls = ExtResource( 2 )
 [node name="Portal" parent="Portals" instance=ExtResource( 4 )]
 position = Vector2( 1546, 142 )
 
+[node name="Portal2" parent="Portals" instance=ExtResource( 4 )]
+position = Vector2( 420, 390 )
+
 [node name="Enemies" type="Node" parent="."]
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 3 )]

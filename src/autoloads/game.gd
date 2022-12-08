@@ -18,7 +18,7 @@ func go_to_next_level():
 	var next_level = load(level_path % (current_level + 1))
 	if next_level != null:
 		world.current_level = next_level.instance()
-		parent.add_child(world.current_level)
+		call_deferred("add_level", parent)
 		
 		world.update_player_reference()
 		world.update_remote_transform()
@@ -28,3 +28,6 @@ func go_to_next_level():
 		get_tree().change_scene("res://src/menus/mainmenu.tscn")
 		current_level = 1
 
+
+func add_level(parent: Node):
+	parent.add_child(world.current_level)

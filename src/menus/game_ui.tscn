@@ -31,10 +31,12 @@ color = Color( 0.0156863, 0.00784314, 0.188235, 0.588235 )
 
 [node name="ScoreLabel" type="Label" parent="ColorRect"]
 unique_name_in_owner = true
+margin_left = 19.0
 margin_right = 196.0
 margin_bottom = 66.0
-text = "Score: 0 & 0"
-align = 1
+rect_scale = Vector2( 0.890646, 0.890646 )
+text = "Score P1: 0
+Score P2: 0"
 valign = 1
 
 [node name="ColorRect2" type="ColorRect" parent="."]
