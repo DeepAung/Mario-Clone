@@ -9,7 +9,7 @@ const MAX_Y := 400.0
 const MOVE_SPEED := 400.0
 const ACCEL := 2000.0
 const DECEL_FLOOR := 3000.0
-const DECEL_AIR := 1000.0
+const DECEL_AIR := 2000.0
 const JUMP_FORCE := 650.0
 const STOMP_FORCE := 1000.0
 

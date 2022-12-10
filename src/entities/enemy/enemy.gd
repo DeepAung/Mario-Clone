@@ -26,6 +26,12 @@ func _physics_process(delta: float) -> void:
 
 func _on_Area2D_area_entered(area: Area2D) -> void:
 	if area.global_position.y + 10.0 < global_position.y:
-		# print(area.global_position.y - 10.0, " ", global_position.y)
-		queue_free()
+		destroy()
 
+
+func destroy() -> void:
+	var tween = create_tween().set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)
+	tween.tween_property(self, "scale", Vector2.ZERO, 1.0)
+	yield(tween, "finished")
+	print("test")
+	queue_free()

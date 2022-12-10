@@ -10,7 +10,7 @@ onready var level_label: Label = $"%LevelLabel"
 var players_score = [0, 0]
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	level_label.text = level_label_str % Game.current_level
 
 	if is_instance_valid(Game.players[0]):

@@ -2,6 +2,8 @@ class_name WorldNode
 extends Node
 
 
+const CAMERA_ZOOM := 1.3
+
 onready var players := {
 	"1": {
 		viewport = $HBoxContainer/ViewportContainer/Viewport,
@@ -23,6 +25,8 @@ var level_path = "res://src/levels/%d.tscn"
 
 func _ready() -> void:
 	Game.world = self
+	for i in players:
+		players[i].camera.zoom = Vector2(CAMERA_ZOOM, CAMERA_ZOOM)
 	
 	current_level = load(level_path % Game.current_level).instance()
 	main_viewport.add_child(current_level)

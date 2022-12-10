@@ -17,7 +17,7 @@ func _ready() -> void:
 
 
 func get_all_levels():
-	var result = []
+	var levels = []
 	
 	var dir := Directory.new()
 	dir.open("res://src/levels/")
@@ -28,8 +28,8 @@ func get_all_levels():
 		if file == "": break
 		
 		if not file.begins_with("."):
-			result.append(file.get_basename())
+			levels.append(file.get_basename())
 	
 	dir.list_dir_end()
 	
-	return result
+	return levels
