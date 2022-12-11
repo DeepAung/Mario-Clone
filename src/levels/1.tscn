@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/my-assets/tlie.png" type="Texture" id=1]
 [ext_resource path="res://src/entities/player/player2_controls.tres" type="Resource" id=2]
 [ext_resource path="res://src/entities/enemy/enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/entities/portal/portal.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/entities/player/player1_controls.tres" type="Resource" id=5]
 [ext_resource path="res://src/entities/player/player.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
@@ -43,6 +44,7 @@ tile_data = PoolIntArray( -327629, 0, 0, -327628, 0, 0, -327627, 0, 0, -327626, 
 
 [node name="Player1" parent="." instance=ExtResource( 7 )]
 position = Vector2( 180, 336 )
+controls = ExtResource( 5 )
 
 [node name="Player2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 276, 375 )

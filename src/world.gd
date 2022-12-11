@@ -24,6 +24,8 @@ var level_path = "res://src/levels/%d.tscn"
 
 
 func _ready() -> void:
+
+	
 	Game.world = self
 	for i in players:
 		players[i].camera.zoom = Vector2(CAMERA_ZOOM, CAMERA_ZOOM)
