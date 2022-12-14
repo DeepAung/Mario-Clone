@@ -33,3 +33,7 @@ func get_all_levels():
 	dir.list_dir_end()
 	
 	return levels
+
+
+func _on_BackButton_pressed() -> void:
+	get_tree().change_scene("res://src/menus/mainmenu.tscn")

@@ -6,4 +6,5 @@
 [node name="MusicController" type="AudioStreamPlayer"]
 stream = ExtResource( 1 )
 volume_db = -20.0
+bus = "BackgroundMusic"
 script = ExtResource( 2 )

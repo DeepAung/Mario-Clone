@@ -1,12 +1,20 @@
 extends Node
 
 
+var pre_scene = null
+
 var level_path = "res://src/levels/%d.tscn"
 var current_level = 1
 var current_score = 0
 
 var players = [null, null]
 var world = null
+
+
+func _ready() -> void:
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("BackgroundMusic"), -19)
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SoundEffects"), -13)
+
 
 func go_to_next_level():
 	world = world as WorldNode

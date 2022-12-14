@@ -12,12 +12,22 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "AudioPlayer",
 "language": "GDScript",
-"path": "res://src/audio/audio_player.gd"
+"path": "res://src/autoloads/audio_player.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://src/entities/enemy/enemy.gd"
 }, {
 "base": "Button",
 "class": "LevelButton",
 "language": "GDScript",
 "path": "res://src/menus/level_button.gd"
+}, {
+"base": "Button",
+"class": "NormalButton",
+"language": "GDScript",
+"path": "res://src/menus/normal_button.gd"
 }, {
 "base": "KinematicBody2D",
 "class": "Player",
@@ -29,6 +39,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/entities/player/player_controls.gd"
 }, {
+"base": "Control",
+"class": "SettingMenu",
+"language": "GDScript",
+"path": "res://src/menus/setting_menu.gd"
+}, {
+"base": "Area2D",
+"class": "WarpDetector",
+"language": "GDScript",
+"path": "res://src/entities/player/warp_detector.gd"
+}, {
 "base": "Node",
 "class": "WorldNode",
 "language": "GDScript",
@@ -36,9 +56,13 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "AudioPlayer": "",
+"Enemy": "",
 "LevelButton": "",
+"NormalButton": "",
 "Player": "",
 "PlayerControls": "",
+"SettingMenu": "",
+"WarpDetector": "",
 "WorldNode": ""
 }
 
@@ -53,6 +77,7 @@ config/icon="res://icon.png"
 Game="*res://src/autoloads/game.gd"
 EventBus="*res://src/autoloads/event_bus.gd"
 MusicController="*res://src/autoloads/music_controller.tscn"
+GlobalAudioPlayer="*res://src/autoloads/audio_player.tscn"
 
 [display]
 

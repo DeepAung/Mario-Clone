@@ -25,6 +25,7 @@ audio_listener_enable_2d = true
 
 [node name="Camera2D" type="Camera2D" parent="HBoxContainer/ViewportContainer/Viewport"]
 current = true
+smoothing_enabled = true
 
 [node name="ColorRect" type="ColorRect" parent="HBoxContainer"]
 margin_left = 516.0
@@ -47,6 +48,7 @@ audio_listener_enable_2d = true
 
 [node name="Camera2D" type="Camera2D" parent="HBoxContainer/ViewportContainer2/Viewport"]
 current = true
+smoothing_enabled = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

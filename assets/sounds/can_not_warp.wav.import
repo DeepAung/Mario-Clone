@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamSample"
-path="res://.import/warp_to_player.wav-990a695ea207e0ad6c8137a62b3146fe.sample"
+path="res://.import/can_not_warp.wav-9c29c00fbc49a9d1141f7d93390a97b2.sample"
 
 [deps]
 
-source_file="res://assets/sounds/warp_to_player.wav"
-dest_files=[ "res://.import/warp_to_player.wav-990a695ea207e0ad6c8137a62b3146fe.sample" ]
+source_file="res://assets/sounds/can_not_warp.wav"
+dest_files=[ "res://.import/can_not_warp.wav-9c29c00fbc49a9d1141f7d93390a97b2.sample" ]
 
 [params]
 

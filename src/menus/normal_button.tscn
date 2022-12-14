@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/themes/mainmenu_theme.tres" type="Theme" id=1]
+[ext_resource path="res://src/menus/normal_button.gd" type="Script" id=2]
+
+[node name="NormalButton" type="Button"]
+margin_right = 12.0
+margin_bottom = 20.0
+theme = ExtResource( 1 )
+text = "Button"
+script = ExtResource( 2 )

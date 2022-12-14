@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/themes/mainmenu_theme.tres" type="Theme" id=1]
 [ext_resource path="res://src/menus/levels_menu.gd" type="Script" id=2]
+[ext_resource path="res://src/themes/setting_font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://src/menus/normal_button.gd" type="Script" id=4]
 
 [node name="LevelsMenu" type="Control"]
 anchor_right = 1.0
@@ -32,13 +34,29 @@ margin_right = 1024.0
 margin_bottom = 600.0
 size_flags_vertical = 3
 custom_constants/margin_top = 50
+custom_constants/margin_bottom = 175
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/MarginContainer"]
 margin_left = 512.0
 margin_top = 50.0
 margin_right = 512.0
-margin_bottom = 522.0
+margin_bottom = 347.0
 size_flags_horizontal = 6
 custom_constants/vseparation = 20
 custom_constants/hseparation = 20
 columns = 5
+
+[node name="BackButton" type="Button" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -251.0
+margin_top = -129.0
+margin_right = -98.0
+margin_bottom = -71.0
+custom_fonts/font = ExtResource( 3 )
+text = "Back"
+script = ExtResource( 4 )
+
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]

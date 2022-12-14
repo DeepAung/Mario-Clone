@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/themes/mainmenu_theme.tres" type="Theme" id=1]
 [ext_resource path="res://src/menus/pause_menu.gd" type="Script" id=2]
+[ext_resource path="res://src/menus/normal_button.gd" type="Script" id=3]
 
 [node name="PauseMenu" type="Control"]
 anchor_right = 1.0
@@ -47,6 +48,7 @@ margin_right = 524.0
 margin_bottom = 70.0
 rect_min_size = Vector2( 0, 70 )
 text = "Resume"
+script = ExtResource( 3 )
 
 [node name="RestartButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -55,6 +57,7 @@ margin_right = 524.0
 margin_bottom = 170.0
 rect_min_size = Vector2( 0, 70 )
 text = "Restart"
+script = ExtResource( 3 )
 
 [node name="SettingButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -63,6 +66,7 @@ margin_right = 524.0
 margin_bottom = 270.0
 rect_min_size = Vector2( 0, 70 )
 text = "Settings"
+script = ExtResource( 3 )
 
 [node name="ExitButton" type="Button" parent="VBoxContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -71,6 +75,7 @@ margin_right = 524.0
 margin_bottom = 370.0
 rect_min_size = Vector2( 0, 70 )
 text = "Exit"
+script = ExtResource( 3 )
 
 [connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/ResumeButton" to="." method="_on_ResumeButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer/VBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]

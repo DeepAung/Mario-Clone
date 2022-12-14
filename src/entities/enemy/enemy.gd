@@ -1,3 +1,4 @@
+class_name Enemy
 extends KinematicBody2D
 
 
@@ -7,6 +8,7 @@ const MOVE_SPEED := 200.0
 
 var velocity := Vector2.ZERO
 var direction := Vector2.ZERO
+var died = false
 
 
 func _ready() -> void:
@@ -30,8 +32,9 @@ func _on_Area2D_area_entered(area: Area2D) -> void:
 
 
 func destroy() -> void:
+
 	var tween = create_tween().set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_OUT)
 	tween.tween_property(self, "scale", Vector2.ZERO, 1.0)
+
 	yield(tween, "finished")
-	print("test")
 	queue_free()
